@@ -1,0 +1,29 @@
+ #surface{
+    
+    margin-left: 0%;
+    margin-right: 25%;
+} 
+body{
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 30px;    
+    background-color: rgb(221, 219, 219);
+    margin-left: 1em;
+    
+    
+}
+#score{
+    float: right;
+    font-size: 45px;
+    margin-right: 1em;
+    margin-top: 7em;
+}
+#remaining{
+    float: left;
+}
+#status{
+    color: red;
+    text-decoration: underline;
+}
+h3{
+    /* text-align: center; */
+}
