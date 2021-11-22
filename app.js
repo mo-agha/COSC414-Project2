@@ -408,10 +408,12 @@ var demo = function(){
   // Updates html text element based on state.
   function successState() {
 
-    if(bacteriaLeft <= 0) {
+    //if no more bacteria left and user still has lives, user wins.
+    if(bacteriaLeft <= 0 && lives>0) {
       document.getElementById("x").innerHTML="You Win!";
       return true;
     }
+    //if user loses all lives, user loses.
     if(lives<=0) { 
       listofbacteria = [];
       document.getElementById("x").innerHTML="You Lose!";
