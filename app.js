@@ -250,6 +250,7 @@ var demo = function(){
         let index = bacteria.index;
         bacteriaLeft--;
         lives--;
+        score -= 50;
         listofbacteria.splice(listofbacteria.indexOf(bacteria), 1);
         setOfBacIds.add(index);
       }
