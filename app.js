@@ -69,7 +69,7 @@ var fragmentShaderCode =
 var demo = function(){
 
   // all the gloabl, game setting variables 
-  var maximumBacterium = 10;
+  var maximumBacterium = 20
   var lives = 2;
   //var toGenerate = [10,12,14,16,18,20];
   //var randomInt = Math.floor(Math.random() * 6);
