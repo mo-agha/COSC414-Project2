@@ -2,21 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title> Super Bug Zapper</title>
+        <title> Super Bug Zapper 3D</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="app.js"> </script>
+        <style>
+          div {
+            background-image: url("bacteria.png");
+          }
+          </style>
+        <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="sphere.js"></script>
+    <!-- <script type="text/javascript" src="shaders.js"></script>  -->
+    <script type="text/javascript" src="utils/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="utils/gl_tools.js"></script>
+    <script type="text/javascript" src="utils/geometry_tools.js"></script>
     </head>
 
     <body onload="demo()">
-          <h3><img src="bacteria.png" width="60" height="60"> Super Bug Zapper <img src="bacteria.png" width="60" height="60"></h3>
-          <div id="remaining">
-          <p id=lives></p>
-          <p id=bacteria></p>
-        </div>
-        <canvas id="surface" width="600" height="600">
-          use browser that supports canvas
-        </canvas>
-          <p id=score></p>
-          <h2 id=status></h2>
+      <canvas id="game-surface" height="800" width="1000">
+        Your browser does not appear to support canvas.
+      </canvas>
+          
+      <canvas id="text" height="0" width="0"></canvas>
+        <h1> Score: <span id="scoreDisplay"></span></h1>
+        <h3> Bacteria Remaining: <span id="bacRemaining"></span></h3>
+        <h3> Lives left: <span id="lives"></span></h3>
+        <p id="x">text</p>  
     </body>
 </html>
