@@ -71,10 +71,10 @@ var demo = function(){
   // all the gloabl, game setting variables 
   var maximumBacterium = 20
   var lives = 2;
-  //var toGenerate = [10,12,14,16,18,20];
-  //var randomInt = Math.floor(Math.random() * 6);
-  //var bacteriaLeft = toGenerate[randomInt];
-  var bacteriaLeft = 10;
+  var toGenerate = [10,12,14,16,18,20];
+  var randomInt = Math.floor(Math.random() * 6);
+  var bacteriaLeft = toGenerate[randomInt];
+  //var bacteriaLeft = 10;
   var score = 0;
   var living = 0;
   let listofbacteria = [];
@@ -152,9 +152,9 @@ var demo = function(){
   //Add event listener for clicking - kills bacteria clicked
   canvas.addEventListener('click', kill());
   //Mouse movement event listeners
-  canvas.addEventListener('mouseup', mouseUp());
-  canvas.addEventListener('mousedown', mouseDown());
   canvas.addEventListener('mousemove', mouseMove());
+  canvas.addEventListener('mousedown', mouseDown());
+  canvas.addEventListener('mouseup', mouseUp());
 
   /** Prevents right click menu from popping up
    * User can use right click to drag and rotate sphere without menu popping up
@@ -370,6 +370,7 @@ var demo = function(){
           z: 0
         };
 
+        //XsqYsq is equal to x ^ 2 * y ^ 2, Rsq is r ^ 2
         let XsqYsq = point.x * point.x + point.y * point.y;
         let Rsq = rotationsphere.r * rotationsphere.r;
         if (XsqYsq < Rsq){
