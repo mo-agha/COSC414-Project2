@@ -68,6 +68,17 @@ function Sphere(gle, depth, centre, radius, colourStart, colourStop,
   this._loadNormalBuffer();
 }
 
+//Creates points from sphere's coords based on longitude and latitude.
+function sphere_vector(theta, phi) {
+  var retval = vec4.fromValues(
+    Math.cos(theta) * Math.sin(phi),
+    Math.cos(phi),
+    Math.sin(theta) * Math.sin(phi),
+    1.0
+  );
+  return retval;
+}
+
 /** Reconstructs the model matrix after a tranformation.
 */
 Sphere.prototype.buildModel = function() {
