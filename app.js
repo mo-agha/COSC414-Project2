@@ -174,7 +174,9 @@ var demo = function(){
     sphere.draw();
 
     listofbacteria.forEach(function(bacteria){
+
       bacteria.draw();
+
     });
 
   }
@@ -206,11 +208,9 @@ var demo = function(){
 
     // Chance based on frequency to spawn bacteria
     if (Math.random() < 1.0 / frequency && listofbacteria.length < maximumBacterium) {
-      let r = vec3.fromValues(Math.random() - 0.5,
-                              Math.random() - 0.5,
-                              Math.random() - 0.5);
+      let r = vec3.fromValues(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5);
       vec3.normalize(r, r);
-
+      
       let index = nextBacterium();
       let colours = ColourMap.get(index);
       let bacteria = new Sphere(glEnvironment, clarity, r, radius, colours[0], colours[1],);
