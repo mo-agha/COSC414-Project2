@@ -210,7 +210,7 @@ var demo = function(){
     if (Math.random() < 1.0 / frequency && listofbacteria.length < maximumBacterium) {
       let r = vec3.fromValues(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5);
       vec3.normalize(r, r);
-      
+
       let index = nextBacterium();
       let colours = ColourMap.get(index);
       let bacteria = new Sphere(glEnvironment, clarity, r, radius, colours[0], colours[1],);
@@ -247,8 +247,8 @@ var demo = function(){
 
       // If bacteria exceeds a limit of r=0.40, kill bacteria and decrease total lives
       if(bacteria.radius >= 0.40) {
-        let indexd = bacteria.indexd;
-        living--;
+        let index = bacteria.index;
+        bacteriaLeft--;
         lives--;
         listofbacteria.splice(listofbacteria.indexOf(bacteria), 1);
         setOfBacIds.add(index);
